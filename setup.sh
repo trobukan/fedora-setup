@@ -23,3 +23,10 @@ sudo dnf install golang
 
 sudo dnf install nvim
 sudo dnf install kitty
+
+git config --global user.name = "trobukan"
+git config --global user.email = "trobukan@gmail.com"
+git config --global init.defaultBranch main
+git config --global color.ui auto
+git config --global pull.rebase false
+git config --global core.editor "nvim"
