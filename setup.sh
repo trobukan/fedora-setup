@@ -20,3 +20,6 @@ sudo dnf install fastfetch
 sudo dnf install nodejs npm
 sudo dnf install docker docker-compose
 sudo dnf install golang
+
+sudo dnf install nvim
+sudo dnf install kitty
