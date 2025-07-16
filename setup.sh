@@ -13,14 +13,7 @@ flatpak install -y flathub app.zen_browser.zen
 flatpak install -y flathub com.spotify.Client
 flatpak install -y flathub md.obsidian.Obsidian
 
-sudo dnf install -y steam htop fastfetch
-
-sudo dnf install -y jetbrains-mono-fonts
-sudo dnf install -y nodejs npm
-sudo dnf install -y docker docker-compose
-sudo dnf install -y golang
-
-sudo dnf install -y nvim kitty
+sudo dnf install -y steam htop fastfetch jetbrains-mono-fonts nodejs npm docker docker-compose golang nvim kitty
 
 git config --global user.name = "trobukan"
 git config --global user.email = "trobukan@gmail.com"
@@ -28,5 +21,15 @@ git config --global init.defaultBranch main
 git config --global color.ui auto
 git config --global pull.rebase false
 git config --global core.editor "nvim"
+
+git clone git@github.com:trobukan/fedorakde-dotfiles.git
+DOTFILES="./fedorakde-dotfiles"
+BASHRC="$DOTFILES/.bashrc"
+KITTY="$DOTFILES/.config/kitty"
+FASTFETH="$DOTFILES/.config/fastfetch"
+
+ln -sf "$BASHRC" "$HOME/.bashrc"
+ln -sf "$KITTY" "$HOME/.config/kitty"
+ln -sf "$FASTFETCH" "$HOME/.config/fastfetch"
 
 plasma-apply-wallpaperimage ./wallpapers/em-roji.jpg
