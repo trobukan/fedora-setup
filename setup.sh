@@ -28,3 +28,8 @@ git config --global init.defaultBranch main
 git config --global color.ui auto
 git config --global pull.rebase false
 git config --global core.editor "nvim"
+
+WALLPAPER_PATH="/wallpapers/em-rofi.jpg"
+if [-f "$WALLPAPER_PATH" ] then
+  plasma-apply-wallpaperimage "$WALLPAPER_PATH"
+fi
