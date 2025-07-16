@@ -1,4 +1,14 @@
 set -e
+force_link() {
+  local source="$1"
+  local target="$2"
+
+  if [ -e "$target" ] || [ -L "$target" ]; then
+    rm -rf "$target"
+  fi
+  ln -sf "$source" "$target"
+}
+
 sudo dnf update -y
 
 sudo dnf install -y \
@@ -28,8 +38,8 @@ BASHRC="$DOTFILES/.bashrc"
 KITTY="$DOTFILES/.config/kitty"
 FASTFETCH="$DOTFILES/.config/fastfetch"
 
-ln -sf "$BASHRC" "$HOME/.bashrc"
-ln -sf "$KITTY" "$HOME/.config/kitty"
-ln -sf "$FASTFETCH" "$HOME/.config/fastfetch"
+forcelink "$BASHRC" "$HOME/.bashrc"
+forcelink "$KITTY" "$HOME/.config/kitty"
+forcelink "$FASTFETCH" "$HOME/.config/fastfetch"
 
 plasma-apply-wallpaperimage ./wallpapers/em-roji.jpg
