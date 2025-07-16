@@ -13,16 +13,14 @@ flatpak install -y flathub app.zen_browser.zen
 flatpak install -y flathub com.spotify.Client
 flatpak install -y flathub md.obsidian.Obsidian
 
-sudo dnf install -y steam htop 
+sudo dnf install -y steam htop  fastfetch
 
 sudo dnf install jetbrains-mono-fonts
-sudo dnf install fastfetch
 sudo dnf install nodejs npm
 sudo dnf install docker docker-compose
 sudo dnf install golang
 
-sudo dnf install nvim
-sudo dnf install kitty
+sudo dnf install nvim kitty
 
 git config --global user.name = "trobukan"
 git config --global user.email = "trobukan@gmail.com"
