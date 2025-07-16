@@ -19,3 +19,4 @@ sudo dnf install jetbrains-mono-fonts
 sudo dnf install fastfetch
 sudo dnf install nodejs npm
 sudo dnf install docker docker-compose
+sudo dnf install golang
