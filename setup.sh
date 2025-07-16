@@ -23,10 +23,10 @@ git config --global pull.rebase false
 git config --global core.editor "nvim"
 
 git clone git@github.com:trobukan/fedorakde-dotfiles.git
-DOTFILES="./fedorakde-dotfiles"
+DOTFILES="$(realpath ./fedorakde-dotfiles)"
 BASHRC="$DOTFILES/.bashrc"
 KITTY="$DOTFILES/.config/kitty"
-FASTFETH="$DOTFILES/.config/fastfetch"
+FASTFETCH="$DOTFILES/.config/fastfetch"
 
 ln -sf "$BASHRC" "$HOME/.bashrc"
 ln -sf "$KITTY" "$HOME/.config/kitty"
