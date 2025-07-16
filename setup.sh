@@ -17,3 +17,4 @@ sudo dnf install -y steam htop
 
 sudo dnf install jetbrains-mono-fonts
 sudo dnf install fastfetch
+sudo dnf install nodejs npm
