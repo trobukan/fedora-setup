@@ -14,3 +14,5 @@ flatpak install -y flathub com.spotify.Client
 flatpak install -y flathub md.obsidian.Obsidian
 
 sudo dnf install -y steam htop 
+
+sudo dnf install jetbrains-mono-fonts
