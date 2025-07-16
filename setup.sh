@@ -7,3 +7,5 @@ sudo dnf install -y \
 
 sudo dnf install makecache
 sudo dnf install -y akmod-nvidia
+
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
