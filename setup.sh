@@ -32,7 +32,7 @@ git config --global color.ui auto
 git config --global pull.rebase false
 git config --global core.editor "nvim"
 
-git clone git@github.com:trobukan/fedorakde-dotfiles.git
+git clone git@github.com:trobukan/dotfiles.git
 DOTFILES="$(realpath ./fedorakde-dotfiles)"
 BASHRC="$DOTFILES/.bashrc"
 KITTY="$DOTFILES/.config/kitty"
