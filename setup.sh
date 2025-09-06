@@ -20,7 +20,14 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 flatpak install --noninteractive flathub app.zen_browser.zen
 
 # > | Useful packages | <
-sudo dnf install -y htop fastfetch jetbrains-mono-fonts nodejs npm docker docker-compose golang neovim kitty stow git
+sudo dnf install -y htop fastfetch nodejs npm docker docker-compose golang neovim kitty stow git
+
+# > | Font | <
+FONT_DIR="$HOME/.local/share/fonts"
+mkdir -p "$FONT_DIR"
+wget -p "$FONT_DIR" https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+unzip -o "$FONT_DIR/JetBrainsMono.zip"
+fc-cache -fv
 
 # > | Wallpaper | <
 if command -v plasma-apply-wallpaperimage &>/dev/null; then
@@ -37,7 +44,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   mkdir -p ~/dotfiles
 
   if [ ! -d ~/dotfiles/.git ]; then
-    git clone https://github.com/your-username/your-dotfiles-repo.git ~/dotfiles/
+    git clone --recurse-submodules https://github.com/your-username/your-dotfiles-repo.git ~/dotfiles/
   fi
 
   cd ~/dotfiles/
