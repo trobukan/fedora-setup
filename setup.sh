@@ -1,14 +1,6 @@
+#!/bin/bash
+
 set -e
-force_link() {
-  local source="$1"
-  local target="$2"
-
-  if [ -e "$target" ] || [ -L "$target" ]; then
-    rm -rf "$target"
-  fi
-  ln -sf "$source" "$target"
-}
-
 sudo dnf update -y
 
 sudo dnf install -y \
@@ -31,15 +23,5 @@ git config --global init.defaultBranch main
 git config --global color.ui auto
 git config --global pull.rebase false
 git config --global core.editor "nvim"
-
-git clone git@github.com:trobukan/fedorakde-dotfiles.git
-DOTFILES="$(realpath ./fedorakde-dotfiles)"
-BASHRC="$DOTFILES/.bashrc"
-KITTY="$DOTFILES/.config/kitty"
-FASTFETCH="$DOTFILES/.config/fastfetch"
-
-forcelink "$BASHRC" "$HOME/.bashrc"
-forcelink "$KITTY" "$HOME/.config/kitty"
-forcelink "$FASTFETCH" "$HOME/.config/fastfetch"
 
 plasma-apply-wallpaperimage ./wallpapers/em-roji.jpg
