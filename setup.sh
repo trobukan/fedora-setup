@@ -24,4 +24,4 @@ git config --global color.ui auto
 git config --global pull.rebase false
 git config --global core.editor "nvim"
 
-plasma-apply-wallpaperimage ./wallpapers/em-roji.jpg
+plasma-apply-wallpaperimage ./wallpapers/wallpaper.jpg
