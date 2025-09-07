@@ -43,6 +43,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "Starting dotfiles setup..."
   mkdir -p ~/dotfiles
 
+  rm -rf ~/.config/fastfetch ~/.config/kitty ~/.config/nvim ~/.config/plasma-org.kde.plasma.desktop-appletsrc ~/.config/kglobalshortcutsrc
   if [ ! -d ~/dotfiles/.git ]; then
     git clone --recurse-submodules https://github.com/your-username/your-dotfiles-repo.git ~/dotfiles/
   fi
