@@ -30,8 +30,12 @@ unzip -o "$FONT_DIR/JetBrainsMono.zip"
 fc-cache -fv
 
 # > | Wallpaper | <
+WALLPAPER_DIR="$HOME/.local/share/wallpapers"
+mkdir -p "$WALLPAPER_DIR"
+
+cp ~/dotfiles/wallpapers/wallpaper.jpg "$WALLPAPER_DIR"
 if command -v plasma-apply-wallpaperimage &>/dev/null; then
-  plasma-apply-wallpaperimage ./wallpapers/wallpaper.jpg
+  plasma-apply-wallpaperimage "$WALLPAPER_DIR/wallpaper.jpg"
 fi
 
 # > | Dotfiles setup (Optional) | <
