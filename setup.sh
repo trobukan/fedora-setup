@@ -53,7 +53,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   fi
 
   cd ~/dotfiles/
-  stow --adopt .
+  stow .
   echo "Dotfiles successfully configured!"
 else
   echo "Dotfiles setup skipped."
