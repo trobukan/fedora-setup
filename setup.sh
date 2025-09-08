@@ -20,7 +20,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 flatpak install --noninteractive flathub app.zen_browser.zen
 
 # > | Useful packages | <
-sudo dnf install -y htop fastfetch nodejs npm docker docker-compose golang neovim kitty stow git zsh zoxide
+sudo dnf install -y htop fastfetch nodejs npm docker docker-compose golang neovim kitty stow git zsh zoxide bat
 
 # > | Font | <
 FONT_DIR="$HOME/.local/share/fonts"
