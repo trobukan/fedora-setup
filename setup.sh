@@ -53,7 +53,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   cd ~/dotfiles/
   for folder in *; do 
-    if [-d "$folder"]; then 
+    if [-d "$folder"] && ["$folder" != ".git"]; then 
       stow "$folder"
     fi 
   done
